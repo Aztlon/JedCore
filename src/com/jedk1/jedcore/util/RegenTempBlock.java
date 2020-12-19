@@ -47,7 +47,7 @@ public class RegenTempBlock {
 		if (DensityShift.isPassiveSand(block)) {
 			DensityShift.revertSand(block);
 		}
-		if (block.getState() instanceof InventoryHolder) {
+		if (block.getState() instanceof InventoryHolder || block.getType() == Material.JUKEBOX) {
 			return;
 		}
 		if (blocks.containsKey(block)) {
